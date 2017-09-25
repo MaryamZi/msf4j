@@ -27,7 +27,7 @@
 
     <artifactId>wso2-msf4j-osgi-test</artifactId>
     <name>WSO2 MSF4J OSGi tests</name>
-    <description>WSO2 MSF4J core</description>
+    <description>WSO2 MSF4J tests</description>
     <url>https://github.com/wso2/msf4j</url>
 
     <dependencies>
@@ -40,7 +40,7 @@
             <artifactId>org.wso2.carbon.utils</artifactId>
         </dependency>
 
-        <!-- Pax Exam Dependencies-->
+        <!--Pax Exam Dependencies-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -111,18 +111,36 @@
             <artifactId>org.jacoco.ant</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.wso2.msf4j</groupId>
             <artifactId>wso2-msf4j-tests</artifactId>
-            <version>${msf4j.version}</version>
+            <version>${project.version}</version>
             <type>zip</type>
         </dependency>
-
         <dependency>
             <groupId>org.wso2.carbon</groupId>
             <artifactId>org.wso2.carbon.container</artifactId>
             <version>${carbon.kernel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient-osgi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore-osgi</artifactId>
+        </dependency>
+
+        <!--Test Artifacts-->
+        <dependency>
+            <groupId>org.wso2.msf4j</groupId>
+            <artifactId>test-microservice-test-artifact</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.msf4j</groupId>
+            <artifactId>second-microservice-test-artifact</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
